@@ -1,0 +1,32 @@
+﻿@using CQRSProject.CQRS.Results
+
+@model List<GetCategoryQueryResult>
+
+@{
+    ViewData["Title"] = "CategoryList";
+}
+
+<h1>CategoryList</h1>
+
+
+<div class="container">
+    <br />
+    <br />
+    <table class="table table-hover">
+        <tr>
+            <th>#</th>
+            <th>Kategori Adı</th>
+            <th>Sil</th>
+            <th>Güncele</th>
+        </tr>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.CategoryID</td>
+                <td>@item.CategoryName</td>
+                <td><button>Sil</button></td>
+                <td><button>Güncelle</button></td>
+            </tr>
+        }
+    </table>
+</div>

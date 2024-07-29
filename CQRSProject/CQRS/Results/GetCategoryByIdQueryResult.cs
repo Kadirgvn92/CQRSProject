@@ -1,6 +1,6 @@
 ﻿namespace CQRSProject.CQRS.Results;
 
-public class CategoryQueryResult
+public class GetCategoryByIdQueryResult
 {
     public int CategoryID { get; set; }
     public string CategoryName { get; set; }

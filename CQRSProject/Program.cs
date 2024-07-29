@@ -1,7 +1,15 @@
+using CQRSProject.CQRS.Handlers.CategoryHandlers;
+using CQRSProject.DAL;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<Context>();
+builder.Services.AddScoped<GetCategoryQueryHandler>();
+
+
+
 
 var app = builder.Build();
 
